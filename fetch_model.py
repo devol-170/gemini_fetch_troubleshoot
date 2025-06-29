@@ -1,4 +1,5 @@
 from typing import Annotated
+import json
 
 from pydantic import BaseModel, Field, AnyUrl
 
@@ -33,8 +34,7 @@ class Fetch(BaseModel):
 
 
 def main():
-    model = Fetch(url ="https://example.com", max_length=1000, start_index=0, raw=True)
-    print(model.schema_json(indent=2))
+    print(json.dumps(Fetch.model_json_schema(), indent=2))  # (2)!
 
 if __name__ == "__main__":
     main()
