@@ -1,5 +1,5 @@
 # .parametersJsonSchema example
-```
+```json
 {
   "type": "object",
   "properties": {
@@ -13,6 +13,7 @@
 ```
 
 # .parameters example
+```json
 {
   "name": {
     "name": "name",
@@ -25,3 +26,4 @@
     "required": true
   }
 }
+```
